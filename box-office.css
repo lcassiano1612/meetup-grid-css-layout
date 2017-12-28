@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    font-weight: bold;
+}
+
+
+
+
+.header {
+    grid-area: header;
+    background: #e74c3c;
+}
+.banner {
+    grid-area: banner; 
+    background: #ccc;
+}
+.menu {
+    grid-area: menuLateral;
+    background: #f1c40f;
+}
+.conteudo {
+    grid-area: conteudo;
+    background: #2980b9;
+}
+.categorias {
+    grid-area: categorias;
+}
+.footer {
+    grid-area: footer;
+    background: #000;
+}
+
+
+
+
+
+.categorias1 {
+    grid-area: categorias1;
+    background: #8e44ad;
+}
+.categorias2 {
+    grid-area: categorias2;
+    background: #7f8c8d;
+}
+.categorias3 {
+    grid-area: categorias3;
+    background: #34495e;
+}
+.categorias4 {
+    grid-area: categorias4;
+    background: #1abc9c;
+}
+.categorias {
+    display: grid;
+        grid-template-areas:
+            "categorias1"
+            "categorias2" 
+            "categorias3" 
+            "categorias4";
+}
+    @media only screen and (min-width: 500px)  {
+        .categorias {
+            padding: 20px;
+            grid-template-areas:
+                "categorias1 categorias1 categorias2 categorias2"
+                "categorias3 categorias3 categorias4 categorias4";
+        }
+    }
+    @media only screen and (min-width: 800px)  {
+        .categorias {
+            padding: 20px;
+            grid-template-areas:
+                "categorias1 categorias2 categorias3 categorias4";
+        }
+    }
+
+
+
+
+
+.wrapper {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "banner"
+        "menuLateral"
+        "conteudo"
+        "footer"
+}
+
+    @media only screen and (min-width: 500px)  {
+        .wrapper {
+            padding: 20px;
+            grid-template-columns: 1fr auto;
+            grid-template-areas:
+                "header   header"
+                "banner banner"
+                "menuLateral  conteudo"
+                "sidebar2 sidebar2"
+                "footer   footer";
+        }
+    }
+
+    @media only screen and (min-width: 600px)   {
+        .wrapper {
+            grid-gap: 0px;
+            grid-template-columns: 120px auto 120px;
+            grid-template-areas:
+                "header header header"
+                "banner banner banner"
+                "menuLateral conteudo conteudo"
+                "footer  footer  footer";
+            max-width: 1170px;
+        }
+    }
+
+    @media (min-width: 1170px) {
+        .wrapper {
+            max-width: 1170px;
+            padding: 0;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+    }   
+
+.box {
+    color: #fff;
+    padding: 10px;
+    font-size: 150%; 
+}   
